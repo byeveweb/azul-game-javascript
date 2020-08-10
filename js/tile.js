@@ -8,7 +8,7 @@ export default class Tile {
     }
 
     //Function for chose the Color Tile Random
-    static tileColorRandom(arr) {
+    tileColorRandom(arr) {
         const tileRandom = Math.floor(Math.random() * arr.length)
         console.log(tileRandom)
         return arr[tileRandom]
@@ -17,15 +17,15 @@ export default class Tile {
 
 
     //Function for compare the tile if both are same
-    static tileComparation(tilePrevius, tileNext) {
+    tileComparation(tilePrevius, tileNext) {
         console.log(`primer argumento ${tilePrevius} y segundo ${tileNext}`)
-        tilePrevius != tileNext ? addTile(tileNext) : null
+        tilePrevius != tileNext ? this.addTile(tileNext) : null
     }
 
 
     //Function for the add tile 
-    static addTile(tileAdd) {
-        tileFactory.push(tileAdd)
+    addTile(tileAdd) {
+        this.tileFactory.push(tileAdd)
     }
 
 
@@ -38,11 +38,11 @@ export default class Tile {
         for (let i = 0; this.tileFactory.length < 4; i++) {
             console.log('---------', this.colors)
             //primer paso
-            tileNext = tileColorRandom(this.colors)
+            tileNext = this.tileColorRandom(this.colors)
             console.log(`primer valor: ${tileNext}`)
 
             //segundo paso comparamos
-            tileComparation(tilePrevius, tileNext)
+            this.tileComparation(tilePrevius, tileNext)
 
             //tercero igualamos
             tilePrevius = tileNext
