@@ -3,39 +3,56 @@
 * {
     font-family: 'Noto Serif', serif;
 }
-#bag {
-    width: 100%;
+
+aside {
+    width: 20%;
+
+
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.bag-container {
+ background-image: url('https://image.freepik.com/foto-gratis/texturas-pared-gris-fondo_74190-4389.jpg');
+ object-position: center;
+ object-fit: contain;
+ width: 100%;
+ padding: 1rem;
+
+}
+
+.bag-wall-board {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
     padding: 1rem;
 }
 
-.bagWallBoard {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    align-items: center;
-    text-align: center;
 
+.tile-column {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
 }
 
-.tile {
-    margin:1rem;
-    width: 150px;
-    height: 150px;
+ .tile {
+    width: 50px;
+    height: 50px;
     border-radius: 1rem;
-    font-weight: 700;
-    font-size: 5rem;
-    color: white;
-
-
+    margin-right: 1rem;
+    border: 5px solid #fff;
 }
 
 .tile.blue {
-   
     background-image: url('https://cdn.pixabay.com/photo/2020/04/19/08/17/watercolor-5062356_1280.jpg');
     object-position: center;
     background-size: cover;
-    
 }
+
+
 
 .tile.red {
     background-image: url('https://cdn.pixabay.com/photo/2017/10/04/07/43/autumn-2815427_1280.jpg');
@@ -59,10 +76,11 @@
     background-image: url('https://cdn.pixabay.com/photo/2017/04/19/09/03/air-2241556_1280.jpg');
     object-position: center;
     background-size: cover;
+} 
+
+.text-tile {
+    font-family: 'Raleway', san-serif;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
-span {
-    
-    font-weight: 700;
-
-}

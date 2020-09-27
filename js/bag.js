@@ -22,24 +22,37 @@ class Bag {
         }
     }
 
+    drawTileColumn() {
+        const divParent = document.createElement('div')
+        divParent.classList.add('tile-column')
+        document.querySelector('.bag-wall-board').appendChild(divParent);
+        console.log(divParent)
+    }
 
+    drawTile(color, numbers) {
 
-    drawTile(color) {
+        this.drawTileColumn()
 
-        //creamos el nodo para la tile
+        //creamos el cuadro del tile y el texto
         const bagTileBoard = document.createElement('div')
         bagTileBoard.classList.add('tile', color)
-        const bagTileText = document.createElement('span')
+        const bagTileText = document.createElement('p')
+        bagTileText.classList.add('text-tile')
+        const bagTileTextNumber = document.createElement('span')
 
         //cramos el contenido
-        const content = document.createTextNode(this.tileBlue.number)
+        const content = document.createTextNode(numbers)
+        const contentNumber = document.createTextNode(color)
 
         //insertamos el contenido
         bagTileText.appendChild(content)
+        bagTileTextNumber.appendChild(contentNumber)
+        console.log(bagTileTextNumber, bagTileText, bagTileBoard)
 
         //insertamos el nuevo elemento
-        document.querySelector('.bagWallBoard').appendChild(bagTileBoard);
-        document.querySelector('.bagWallBoard').appendChild(bagTileText);
+        document.querySelector('.tile-colum').appendChild(bagTileBoard);
+        document.querySelector('.tile-colum').appendChild(bagTileText);
+        document.querySelector('.tile-colum').appendChild(bagTileTextNumber);
 
     }
 
