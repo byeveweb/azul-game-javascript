@@ -1,40 +1,32 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-
-* {
-    font-family: 'Noto Serif', serif;
-}
-
 body {
-    background-image: url('../img/back.png');
+  margin: 3rem;
 }
 
 img {
-    max-width: 100%;
-}
-.score, .score-tracK, .floor-line {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    
-    
+  width: 100%;
 }
 
-.params::after {
-
+.flex-center {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.params {
-    content: "";
-    background: url('/../img/dummy-img.jpg') 0 0 no-repeat;
-width: 80%;
-height: 80%;
-transform: rotate(45deg);
-display: block;
+/* Score div */
 
-    width: 100px;
-    height: 100px;
-    margin: 0 1rem;
-    padding: 0 1rem;
+.score {
+  width: 100%;
+  background-color: teal;
+}
 
+/*Wallboard Div */
+
+.wallboard {
+  background-color: thistle;
+  width: 100%;
+}
+
+.wallboard-tiles {
+  padding: 1rem 0;
 }
